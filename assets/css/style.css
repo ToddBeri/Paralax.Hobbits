@@ -1,0 +1,174 @@
+:root {
+  --index: calc(1vw + 1vh);
+  --transition: transform .75s cubic-bezier(.075, 0.5, 0.0, 1.0);
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.main-header {
+  position: relative;
+}
+.main-header .layers {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.main-header .layers .layer__header {
+  z-index: 1;
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  text-transform: uppercase;
+  will-change: transform;
+  font-size: calc(var(--index) * 1.5);
+  font-weight: 700;
+  margin-top: calc(var(--index) * -3);
+  transition: var(--transition);
+}
+.main-header .layers .layer__header .layers__title {
+  font-size: calc(var(--index) * 2.5);
+}
+.main-header .layers .layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 2;
+  transition: var(--transition);
+}
+.main-header .layers .layer.bace {
+  transform: translate3d(0, calc(var(--scrollTop) / 1.5), 0);
+  z-index: 0;
+}
+.main-header .layers .layer.mid {
+  height: 70vh;
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  bottom: 0;
+}
+.main-header .layers .layer.bot {
+  height: 45vh;
+  transform: translate3d(0, calc(var(--scrollTop) / 8), 0);
+  margin-top: calc(var(--index) * 28);
+}
+.main-header:after {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: calc(var(--index) * 10);
+  background-image: url(../img/ground.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: calc(var(--index) * -4.6);
+}
+
+.main-article {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: var(--transition);
+}
+.main-article:after {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: calc(var(--index) * 10);
+  background-image: url(../img/ground.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: calc(var(--index) * -9.1);
+}
+.main-article .main-article__content {
+  text-transform: uppercase;
+  text-align: center;
+  transform: translate3d(0, calc(var(--scrollTop) / 15), 0);
+  font-size: calc(var(--index) * 1.5);
+  font-weight: 500;
+  color: rgb(232, 232, 232);
+}
+.main-article .main-article__content .main-article__header {
+  font-size: calc(var(--index) * 2.5);
+}
+.main-article .main-article__content p {
+  max-width: 50vw;
+}
+
+.main-gold {
+  position: relative;
+}
+.main-gold .layers_of_gold {
+  margin-top: calc(var(--index) * 5);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.main-gold .layers_of_gold .gold__content {
+  z-index: 3;
+  transform: translate3d(0, calc(var(--scrollTop) / 15), 0);
+  text-transform: uppercase;
+  will-change: transform;
+  font-size: calc(var(--index) * 1.5);
+  font-weight: 700;
+  margin-top: calc(var(--index) * -10);
+  transition: var(--transition);
+  color: rgb(249, 224, 151);
+  width: 50vw;
+}
+.main-gold .layers_of_gold .gold__content .gold__header {
+  font-size: calc(var(--index) * 2.5);
+}
+.main-gold .layers_of_gold .layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 2;
+  transition: var(--transition);
+}
+.main-gold .layers_of_gold .layer.back_stone {
+  transform: translate3d(0, calc(var(--scrollTop) / 1.5), 0);
+  margin-top: calc(var(--index) * -85);
+  z-index: 0;
+}
+.main-gold .layers_of_gold .layer.mid_stone {
+  height: 100%;
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  margin-top: calc(var(--index) * -50);
+}
+.main-gold .layers_of_gold .layer.front_stone {
+  height: 100%;
+  transform: translate3d(0, calc(var(--scrollTop) / 8), 0);
+  margin-top: calc(var(--index) * -14);
+}
+
+a {
+  text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6, body {
+  margin: 0;
+  font-family: "Kurale", serif;
+  text-shadow: black 0 0 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
